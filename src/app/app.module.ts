@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { My1stComComponent } from './my-1st-com/my-1st-com.component';
+import { MyNestedComComponent } from './my-nested-com/my-nested-com.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    My1stComComponent
+    My1stComComponent,
+    MyNestedComComponent
   ],
   imports: [
     BrowserModule,
