@@ -1,3 +1,38 @@
 <p>
   my-nested-com works!
 </p>
+highlightedBlogs
+<table>
+  <tr>
+    <td>index</td>
+    <td>id</td>
+    <td>thumbnailUrl</td>
+    <td>subject</td>
+    <td>description</td>
+  </tr>
+  <tr *ngFor="let h of highlightedBlogs; let i = index">
+    <td>{{i}}</td>
+    <td>{{id}}</td>
+    <td><img src="{{h.thumbnailUrl}}" width="20px" height="20px" /></td>
+    <td>{{h.subject}}</td>
+    <td>{{h.description}}</td>
+  </tr>
+</table>
+
+regularBlogs
+<table>
+   <tr>
+    <td>index</td>
+    <td>id</td>
+    <td>thumbnailUrl</td>
+    <td>subject</td>
+    <td>description</td>
+  </tr>
+  <tr *ngFor="let h of regularBlogs; let i = index">
+    <td>{{i}}</td>
+    <td>{{id}}</td>
+    <td><img src="{{h.thumbnailUrl}}" width="20px" height="20px" /></td>
+    <td>{{h.subject}}</td>
+    <td>{{h.description}}</td>
+  </tr>
+</table>

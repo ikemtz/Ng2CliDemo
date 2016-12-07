@@ -17,6 +17,17 @@ export class MyNestedComComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.blogService
+      .GetBlogsResponse()
+      .then(resp => {
+        console.log(JSON.stringify(resp));
+        resp.forEach((val: IBlog, index: number, array: IBlog[]): void => {
+          if (val.isHighlighted)
+            this.highlightedBlogs.push(val);
+          else
+            this.regularBlogs.push(val);
+        });
+      });
   }
 
 }
